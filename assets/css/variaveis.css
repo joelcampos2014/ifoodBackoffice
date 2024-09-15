@@ -1,0 +1,8 @@
+:root {
+    --bg-cinza: #F1F0F0;
+    --bg-vermelho: #EA1D2C;
+    --bg-preto: #000000;
+    --bg-azul: #297AF4;
+    --transicao: .5s;
+    --font-family: "Averia Serif Libre", system-ui;
+}
