@@ -1,3 +1,106 @@
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: var(--bg-cinza);
+    font-family: "Averia Serif Libre", system-ui;
+    background-color: #F1F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+} 
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1F0F0;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 img {
+    background-color: #F1F0F0;
+    width: 80px;
+    vertical-align: middle;
+}
+
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+
+.login-form label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    border-color: #EA1D2C;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: .75rem;
+    background-color: #EA1D2C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #EA1D2C;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 1rem;
+    color: #297AF4;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.signup-text {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.signup-text a {
+    color: #EA1D2C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
 }
