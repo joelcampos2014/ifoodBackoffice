@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Ifood Parceiros</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="text">
+            <h1>Bem vindo, parceiro <img src="./assets/images/ifood.png" alt="Logo Ifood" title="Logo Ifood"></h1>
+            <p>Gerencie sua loja de forma fácil e inteligente!</p>
+    </div>
+
+    <div class="login-container">
+        <form class="login-form">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="nome@email.com" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="digite sua senha" required>
+
+        <button type="submit" class="login-btn">Entrar</button>
+
+        <a href="#" class="forgot-password">Esqueci a senha</a>
+        </form>
+
+    <p class="signup-text">Ainda não é parceiro? <a href="#">Crie sua conta</a></p>
+    </div>
+
 </body>
 </html>
