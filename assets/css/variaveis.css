@@ -6,6 +6,9 @@
     --bg-cinza-claro: #d3d3d3;
     --bg-branco: #FFFFFF;
     --bg-verde: #0B8F10;
+    --bg-rosa: #FCF3F3;
+    --bg-cinza-escuro: #D9D9D9;
+    --bg-cinza-gray: #656262;
     --transicao: .5s;
     --font-family: "Averia Serif Libre", system-ui;
 }

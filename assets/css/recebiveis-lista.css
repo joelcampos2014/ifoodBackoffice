@@ -1,0 +1,179 @@
+* {
+    font-family: "Averia Serif Libre", system-ui;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-cinza);
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-branco);
+    font-size: 1.5rem;
+}
+
+input {
+    border-color: var(--bg-vermelho);
+    border-radius: 1rem;
+    color: var(--bg-cinza-escuro);
+    padding-left: 2rem;
+}
+
+label {
+    margin-left: 3rem;
+}
+
+span {
+    margin-left: 0.3rem;
+    color: var(--bg-cinza-gray);
+    
+}
+
+.receivables-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+                    "header header"
+                    "filter-search filter-search"
+                    "selector-type selector-type"
+                    "register-list register-list";
+    background-color: var(--bg-branco);
+    margin: 10rem;
+}
+
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-areas: "word-header add-button";
+}
+
+.filter-search {
+    grid-area: filter-search;
+    margin-top: 2rem;
+    background-color: var(--bg-rosa);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-areas: "date-inputs search-input";
+}
+
+.selector-type {
+    grid-area: selector-type;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.register-list {
+    grid-area: register-list;
+    display: flex;
+    justify-content: center;
+}
+
+.word-header {
+    grid-area: word-header;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.add-button {
+    display: flex;
+    grid-area: add-button;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+#button-add {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    max-width: 15vh;
+    border-radius: 20px;
+}
+
+#button-add:hover {
+    background-color: var(--bg-branco);
+}
+
+#button-add a:hover {
+    color: var(--bg-vermelho);
+}
+
+#button-adda:hover {
+    background-color: var(--bg-branco);
+}
+
+.date-inputs {
+    grid-area: date-inputs;
+    margin-right: 2rem;
+    display: flex;
+}
+
+.search-input {
+    grid-area: search-input;
+    display: flex;
+}
+
+.input-field {
+    width: 90%;
+    max-height: 30px;
+    margin-top: 2rem;
+}
+
+.start-date {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 5rem;
+}
+
+.finish-date {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.search-button {
+    max-height: 30px;
+    margin-top: 2rem;
+    border: 0;
+    margin-left: 1rem;
+    background-color: var(--bg-rosa);
+}
+
+.search-button:hover {
+    color: var(--bg-vermelho);
+}
+
+#payables {
+    margin-left: 2rem;
+    min-width: 20px;
+    min-height: 20px;
+    border: 0;
+    background-color: var(--bg-branco);
+}
+
+#receivables {
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--bg-branco);
+}
+
+th {
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px var(--bg-cinza);
+}
+
+td {
+    border-bottom: solid 1px var(--bg-cinza);
+    padding-bottom: 4rem;
+}
+
