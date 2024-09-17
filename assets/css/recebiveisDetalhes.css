@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Averia Serif Libre", system-ui;
+}
+
+main {
+    background-color: #F1F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.icon-arrow {
+    position: relative;
+    bottom: -430px;  
+    left: 35px;
+    display: inline-block;
+    cursor: pointer; 
+    transition: color 0.3s;  
+}
+
+.icon-arrow:hover {
+    color: #EA1D2C;
+}
+
+.icon-arrow svg {
+    vertical-align: middle; 
+}
+
+svg.bi-bell-fill {
+    fill: black; 
+    transition: fill 0.3s ease; 
+}
+
+svg.bi-bell-fill:hover {
+    fill: #EA1D2C; 
+}
+
+.icon-container {
+    position: absolute;
+    top: 20px;    
+    right: 15px;  
+    cursor: pointer;
+}
+
+.icon-container svg {
+    display: inline-block;
+    margin-right: 10px; 
+    width: 28px; 
+    height: 28px;
+}
+
+.icon-container svg:last-child {
+    margin-right: 10px; 
+}
+
+.container {
+    background-color: white;
+    padding: 120px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.descricao {
+    grid-column: span 2;
+}
+
+.save-btn {
+    grid-column: span 2;
+    padding: 10px;
+    background-color: #EA1D2C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    align-self: end;
+    justify-self: end;
+}
+
+.save-btn:hover {
+    background-color: #EA1D2C;
+}
