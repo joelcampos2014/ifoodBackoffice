@@ -13,3 +13,101 @@ body {
     font-size: 1.6rem;
     background-color: var(--bg-cinza);
 }
+
+a {
+    text-decoration: none;
+    color: var(--bg-branco);
+    font-size: 1.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    grid-template-areas:
+                    "header header"
+                    "card1 card2"
+                    "card3 card4";
+    margin: 5rem 0;
+    padding: 0 2rem;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 2rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 4rem;
+    text-shadow: var(--bg-cinza-claro) 1px 0 10px;
+}
+
+.card1 {
+    grid-area: card1;
+    min-height: 50vh;
+}
+
+.card2 {
+    grid-area: card2;
+    min-height: 50vh;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.button {
+    margin-top: 2rem;
+    max-width: 15vh;
+    border-radius: 20px;
+}
+
+td {
+    border-bottom: solid 1px var(--bg-cinza);
+}
+
+.greeting {
+    grid-area: greeting;
+}
+
+.balance {
+    text-align: right;
+    display: flex;
+    grid-area: balance;
+    flex-direction: row-reverse;
+}
+
+.balance h2 {
+    margin-bottom: 4rem;
+    text-shadow: var(--bg-cinza-claro) 1px 0 10px;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: "greeting balance";
+    grid-area: header;
+    height: 5rem;
+}
+
+#hide-balance {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    margin-bottom: 10vh;
+    margin-left: 1vh;
+}
+
+#hide-balance:hover {
+    color: var(--bg-vermelho);
+}
+
+#balance-amount {
+    margin-left: 1rem;
+    text-shadow: var(--bg-cinza-claro) 1px 0 10px;
+}
