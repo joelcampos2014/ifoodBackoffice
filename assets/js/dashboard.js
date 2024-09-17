@@ -106,13 +106,12 @@ header[0].querySelector('.balance p').textContent = balance;
 // Oculta o Saldo
 var hideButton = document.getElementById('hide-balance');
 hideButton.addEventListener('click', function() {
-    var opacity = document.getElementById('balance-amount').style.opacity;
-    console.log(opacity);
-    if (opacity == 1 || !opacity) {
-        document.getElementById('balance-amount').style.opacity = 0.01;
+    var amount = document.getElementById('balance-amount').innerHTML;
+    if (amount == '*******') {
+        document.getElementById('balance-amount').textContent = balance;
     }
     else {
-        document.getElementById('balance-amount').style.opacity = 1;
+        document.getElementById('balance-amount').textContent = '*******';
     }
     
 })
