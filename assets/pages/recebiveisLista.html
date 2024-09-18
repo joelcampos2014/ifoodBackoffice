@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item"></li>
-                    <a href="/assets/pages/recebiveis-list.html" class="sidebar-link">
+                    <a href="#" class="sidebar-link">
                         <i class="fa-solid fa-briefcase"></i>
                         <span>Gestão de Recebíveis</span>
                     </a>
@@ -99,20 +99,18 @@
                             <input type="Date" name="finish-date" id="finish-date">
                             <label class="input-label" for="finish-date">Data Final</label>
                         </div>
+                        <button id="reset-button" type="button">
+                            <i class="fa-solid fa-square-xmark"></i>
+                            <span>Resetar Filtros</span>
+                        </button>
                     </div>
 
                     <div class="search-input">
                         <input type="text" placeholder="Buscar Registro" name="search-bar" id="search-bar" class="input-field">
-                        <button class="search-button" type="button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                        <button id="search-button" type="button">
+                            <i i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
-                </div>
-                <div class="selector-type">
-                    <button id="receivables" type="button"><i class="fa-regular fa-circle-dot"></i></button>
-                    <span>Recebíveis</span>
-                    <button id="payables" type="button"><i class="fa-regular fa-circle-dot"></i></button>
-                    <span>Gastos</span>
                 </div>
                 <div class="register-list">
                     <table class="register-table">
@@ -122,32 +120,27 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Valor</th>
                                 <th scope="col">Vencimento</th>
-                                <th scope="col">Recorrência</th>
+                                <th scope="col">Tipo</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <script id="move-table" type="text/template">
+                    <script id="table" type="text/template">
                         <tr>
                             <td>{{CreationDate}}</td>
                             <td>{{Name}}</td>
                             <td>{{Amount}}</td>
                             <td>{{DueDate}}</td>
-                            <td>{{Recurrency}}</td>
-                            <td></td>
+                            <td>{{Type}}</td>
+                            <td>
+                                <div class="add-button">
+                                    <button type="button" class="btn btn-danger details-button"><a href="/assets/pages/recebiveisDetalhe.html">Detalhes</a></button>
+                                </div>
+                            </td>
                         </tr>
                     </script>
                 </div>
-                <nav aria-label="...">
-                    <ul class="pagination pagination-sm">
-                        <li class="page-item active" aria-current="page">
-                            <span class="page-link">1</span>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    </ul>
-                </nav>
             </div>
         </main>
     </div>
