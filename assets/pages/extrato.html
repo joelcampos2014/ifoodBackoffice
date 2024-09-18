@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="/assets/css/extrato.css">
+    <link rel="stylesheet" href="/assets/css/variaveis.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato Ifood</title>
+    <!-- Inclusão do FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+<body>
+    <div class="container">
+        <!--menu lateral-->
+        <div class="menu">
+            <aside id="sidebar">
+                <div class="d-flex">
+                    <button class="toggle-btn" type="button">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="sidebar-logo">
+                    <img src="/assets/images/ifood.png" alt="Ifood Logo">
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a href="/assets/pages/dashboard.html" class="sidebar-link">
+                            <i class="fa-solid fa-chart-simple icon"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="/assets/pages/extrato.html" class="sidebar-link">
+                            <i class="fa-solid fa-coins"></i>
+                            <span>Extrato</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item"></li>
+                        <a href="/assets/pages/recebiveis-list.html" class="sidebar-link">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Gestão de Recebíveis</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item"></li>
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+    
+                </ul>
+                <div class="sidebar-footer">
+                    <li class="sidebar-item"></li>
+                        <a href="/assets/pages/config.html" class="sidebar-link">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item"></li>
+                        <a href="/index.html" class="sidebar-link">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Sair</span>
+                        </a>
+                    </li>
+                </div>
+            </aside>
+            
+        </div>
+        
+        <!--conteúdo principal-->
+        <div class="main-content">
+            <h2>Acesse seu extrato</h2>
+            
+            <div class="saldo">
+                
+                <div class="balance">
+                    <h3>Saldo em conta:</h3>
+                    <button id="hide-balance" type="button">
+                        <i class="fa-regular fa-eye-slash"></i>
+                    </button>
+                    <p id="balance-amount"></p>
+                    <!-- <h2>Saldo em conta:</h2> -->
+                </div>
+
+                <!-- <p>Saldo disponível</p>
+                <h3>R$******</h3> -->
+                <p class="ultima-transferencia">Última transferência: 01/06/2024</p>
+            </div>
+            <div class="filtros">
+                <label for="filtros">Filtros</label>
+                <select id="filtros">
+                    <option value="6 meses">6 meses</option>
+                </select>
+            </div>
+            <!--tabela de extratos-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Período</th>
+                        <th>Descrição</th>
+                        <th>Visualização</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Janeiro/2024</td>
+                        <td>Extrato mensal</td>
+                        <td><img src="/assets/images/hidden.png" alt="Visualizar extrato de Janeiro"></td>
+                    </tr>
+                    <tr>
+                        <td>Fevereiro/2024</td>
+                        <td>Extrato mensal</td>
+                        <td><img src="/assets/images/hidden.png" alt="Visualizar extrato de Fevereiro"></td>
+                    </tr>
+                    <tr>
+                        <td>Abril/2024</td>
+                        <td>Extrato mensal</td>
+                        <td><img src="/assets/images/hidden.png" alt="Visualizar extrato de Abril"></td>
+                    </tr>
+                    <tr>
+                        <td>Maio/2024</td>
+                        <td>Extrato mensal</td>
+                        <td><img src="/assets/images/hidden.png" alt="Visualizar extrato de Maio"></td>
+                    </tr>
+                    <tr>
+                        <td>Junho/2024</td>
+                        <td>Extrato mensal</td>
+                        <td><img src="/assets/images/hidden.png" alt="Visualizar extrato de Junho"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/menu.js"></script>
+<script src="/assets/js/extrato.js"></script>
+</html>
