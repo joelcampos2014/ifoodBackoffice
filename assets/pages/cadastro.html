@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="/assets/css/cadastro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Backoffice Ifood</title>
+</head>
+<body>
+    <div class="container"> 
+        <!-- Seção da esquerda com imagem e texto -->
+        <div class="left-sid">
+            <img src="/assets/images/ifood.png" alt="logo Ifood" class="imagem loja"> <!-- Primeira imagem -->
+            <h3>Precisando de organização e gestão para a sua loja?</h3>
+            <h4>Seu negócio pede <img src="/assets/images/ifood.png" alt="logo Ifood" class="imagem pequena"></h4> <!-- Segunda imagem após o texto -->
+        </div>
+
+        <div class="right-side">
+            <h2>Cadastre sua loja</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="celular">Celular com DDD</label>
+                <input type="tel" id="celular" name="celular" placeholder="(xx)xxxxxxxxx" required>
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+                <button type="submit"><a href="/index.html">Cadastrar</a></button>
+            </form>
+            <p class="termos">Ao clicar em cadastrar você concorda com os termos de uso da plataforma.</p>
+        </div>
+
+    </div>
+</body>
+</html>

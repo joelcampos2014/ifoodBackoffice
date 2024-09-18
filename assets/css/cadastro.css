@@ -1,0 +1,148 @@
+:root { 
+    --bg-cinza: #F1F0F0;
+    --bg-vermelho: #EA1D2C;
+    --bg-preto: #000000;
+    --bg-azul: #297AF4;
+    --transicao: .5s;
+    --font-family: "Averia Serif Libre", system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Averia Serif Libre", system-ui;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-cinza);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left-sid, .right-side {
+    padding: 20px;
+    width: 50%;
+}
+
+.left-sid {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-sid img.imagem {
+    width: 50%; /* Primeira imagem ocupa 50% da largura */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform var(--transicao) ease, filter var(--transicao) ease; /* Efeito de acender ao passar o mouse */
+}
+
+.left-sid img.imagem:hover {
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+    filter: brightness(1.2); /* Efeito de brilho ao passar o mouse */
+}
+
+.left-sid h3, .left-sid h4 {
+    margin-bottom: 10px;
+    color: var(--bg-preto);
+}
+
+.left-sid h4 {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-sid h4 img.imagem.pequena {
+    width: auto;
+    height: 1.2em; /* Ajusta a altura da imagem ao tamanho da fonte */
+    vertical-align: -0.1em; /* Move a imagem levemente para baixo */
+    margin-left: 5px; /* Pequeno espaço entre a frase e a imagem */
+    transition: transform var(--transicao) ease, filter var(--transicao) ease;
+}
+
+.left-sid h4:hover img.imagem.pequena {
+    transform: scale(1.05); /* Aumenta levemente a imagem ao passar o mouse */
+    filter: brightness(1.2); /* Efeito de brilho ao passar o mouse */
+}
+
+.right-side {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color var(--transicao) ease, box-shadow var(--transicao) ease;
+    background-color: #f9f9f9; /* Cor de fundo dos campos */
+    transition: background-color var(--transicao) ease, box-shadow var(--transicao) ease; /* Transição para o efeito */
+}
+
+input:hover {
+    background-color: #fff; /* Cor de fundo mais clara ao passar o mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve ao passar o mouse */
+    border-color: #999; /* Altera a cor da borda ao passar o mouse */
+}
+
+input:focus {
+    border-color: #999;
+    outline: none;
+    background-color: #fff; /* Mantém o fundo mais claro quando focado */
+}
+
+button {
+    padding: 12px;
+    background-color: var(--bg-vermelho);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transicao);
+}
+a{
+    text-decoration: none;
+    color: var(--bg-cinza);
+}

@@ -1,0 +1,220 @@
+:root {
+    --bg-cinza: #F1F0F0;
+    --bg-vermelho: #EA1D2C;
+    --bg-azul: #297AF4;
+    --transicao: .5s;
+    --font-family: "Averia Serif Libre", system-ui;
+    --text-escuro: #333333; /* Tom mais escuro para o texto */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Averia Serif Libre", system-ui;
+}
+
+html, body {
+    height: 100%;
+    font-family: var(--font-family);
+    color: var(--text-escuro); /* Cor do texto em todo o documento */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Menu lateral */
+.sidebar {
+    background-color: var(--bg-cinza);
+    color: var(--text-escuro); /* Cor do texto no menu lateral */
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 100vh;
+    transition: var(--transicao);
+}
+
+/* Logo no menu lateral */
+.sidebar .logo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Itens do menu */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: var(--text-escuro); /* Cor do texto dos itens do menu */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transicao);
+}
+
+.sidebar ul li a:hover {
+    color: var(--bg-azul); /* Cor ao passar o cursor sobre os itens do menu */
+}
+
+.sidebar ul li.active a {
+    font-weight: bold;
+    color: var(--bg-vermelho); /* Cor do item ativo */
+}
+
+.sidebar-footer a {
+    color: var(--text-escuro); /* Cor do texto no rodapé do menu lateral */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+}
+
+.sidebar-footer a:hover {
+    color: var(--bg-azul); /* Cor ao passar o cursor sobre o rodapé do menu lateral */
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--bg-cinza);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transicao);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: black; /* Cor do título */
+}
+
+/* Caixa de saldo */
+.saldo {
+    background-color: white; /* Fundo branco para caixa de saldo */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transicao);
+}
+
+.saldo h3 {
+    margin: 10px 0;
+    color: black; /* Cor do valor do saldo */
+}
+
+.ultima-transferencia {
+    color: var(--text-escuro); /* Cor da última transferência */
+}
+
+/* Filtros */
+.filtros {
+    margin-bottom: 20px;
+}
+
+.filtros label {
+    margin-right: 10px;
+    color: var(--text-escuro); /* Cor da label dos filtros */
+}
+
+.filtros select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--bg-vermelho);
+    color: var(--text-escuro); /* Cor do texto dentro do select */
+    background-color: var(--bg-cinza);
+}
+
+/* Tabela de extratos */
+table {
+    width: 100%;
+    background-color: white; /* Fundo branco para tabela */
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transicao);
+}
+
+thead {
+    background-color: var(--bg-vermelho);
+    color: white; /* Cor do texto no cabeçalho da tabela */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--bg-azul);
+}
+
+td img {
+    width: 24px;
+    height: 24px;
+    transition: var(--transicao);
+}
+
+/* Estilização das abas de visualização */
+td img:hover {
+    background-color: var(--bg-azul); /* Fica azul ao passar o cursor */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .saldo, table {
+        font-size: 0.9rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+
+    }
+}
+
+#hide-balance {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    margin-left: 1vh;
+    font-size: 20px;
+}
+
+#hide-balance:hover {
+    color: var(--bg-vermelho);
+}
+.balance p{
+    font-weight: bold
+}
