@@ -6,67 +6,80 @@
     <title>Configurações</title>
     <link rel="stylesheet" href="/assets/css/config.css">
 </head>
-<body>
-    <div class="icon-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
-        </svg>
-    </div>
-    <!-- <div class="config-header"><h2>Configurações</h2>
-    </div> -->
-    <div class="container">
-        <div class="header">
-            <div class="profile-section">
-                <div class="profile-image"></div>
-                <div class="profile-info">
-                    <span>Ifood User154233</span>
-                    <button class="edit-image-btn">Editar imagem</button>
+    <div class="page">
+        <div class="config-header">
+            <h2>Configurações</h2>
+        </div> 
+        <div class="icon-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="header">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </div>
+            
+                        
+                    </div>
+                    <div class="profile-info">
+                        <span>Ifood User154233</span>
+                        <button class="edit-image-btn">Editar imagem</button>
+                    </div>
                 </div>
+            </div>
+            <div class="settings-section">
+                
+                <div class="setting-item">
+                    <div class="label-value">
+                        <span class="label">Nome de exibição</span>
+                        <span class="value">Ifood User154233</span>
+                    </div>
+                    <button>Editar</button>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="label-value">
+                        <span class="label">Nome de usuário</span>
+                        <span class="value">Ifood_User154233</span>
+                    </div>
+                    <button>Editar</button>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="label-value">
+                        <span class="label">E-mail</span>
+                        <span class="value" id="email">Ifood_User154233@example.com</span>
+                        <a class="show-button" href="#" onclick="toggleVisibility('email', '********@gmail.com', 'email@example.com')">Mostrar</a>
+                    </div>
+                    <button>Editar</button>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="label-value">
+                        <span class="label">Telefone</span>
+                        <span class="value" id="phone">(11)-99999-9999</span>
+                        <a class="show-button" href="#" onclick="toggleVisibility('phone', '********9083', '(11) 99999-9083')">Mostrar</a>
+                    </div>
+                    <button>Editar</button>
+                </div>
+                
+            </div>
+            <div class="logoesenha">
+                <!-- <div class="password-section">
+                    <button class="change-password-btn">Mudar senha</button>
+                </div> -->
+                <footer>
+                    <img src="/assets/images/ifood.png" alt="iFood logo">
+                </footer>
             </div>
         </div>
-        <div class="settings-section">
-            
-            <div class="setting-item">
-                <div class="label-value">
-                    <span class="label">Nome de exibição</span>
-                    <span class="value">Ifood User154233</span>
-                </div>
-                <button>Editar</button>
-            </div>
-            
-            <div class="setting-item">
-                <div class="label-value">
-                    <span class="label">Nome de usuário</span>
-                    <span class="value">Ifood_User154233</span>
-                </div>
-                <button>Editar</button>
-            </div>
-            
-            <div class="setting-item">
-                <div class="label-value">
-                    <span class="label">E-mail</span>
-                    <span class="value" id="email">Ifood_User154233@example.com</span>
-                    <a class="show-button" href="#" onclick="toggleVisibility('email', '********@gmail.com', 'email@example.com')">Mostrar</a>
-                </div>
-                <button>Editar</button>
-            </div>
-            
-            <div class="setting-item">
-                <div class="label-value">
-                    <span class="label">Telefone</span>
-                    <span class="value" id="phone">(11)-99999-9999</span>
-                    <a class="show-button" href="#" onclick="toggleVisibility('phone', '********9083', '(11) 99999-9083')">Mostrar</a>
-                </div>
-                <button>Editar</button>
-            </div>
-            
-        </div>
-        <div class="password-section">
-            <button class="change-password-btn">Mudar senha</button>
-        </div>
-        <footer>
-            <img src="/assets/images/ifood.png" alt="iFood logo">
-        </footer>
     </div>
 </body>
 </html>
