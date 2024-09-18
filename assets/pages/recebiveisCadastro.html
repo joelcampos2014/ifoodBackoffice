@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- link CDN font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebiveis - Cadastro</title>
+
+    <link rel="stylesheet" href="/assets/css/variaveis.css">
+    <link rel="stylesheet" href="/assets/css/recebiveisCadastro.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+
+<body>
+    <header>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    </header>
+    <div class="menu">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-logo">
+                <img src="/assets/images/ifood.png" alt="Ifood Logo">
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="/assets/pages/dashboard.html" class="sidebar-link">
+                        <i class="fa-solid fa-chart-simple icon"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/assets/pages/extrato.html" class="sidebar-link">
+                        <i class="fa-solid fa-coins"></i>
+                        <span>Extrato</span>
+                    </a>
+                </li>
+                <li class="sidebar-item"></li>
+                <a href="/assets/pages/recebiveisLista.html" class="sidebar-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Gestão de Recebíveis</span>
+                </a>
+                </li>
+                <li class="sidebar-item"></li>
+                <a href="/assets/pages/relatorios.html" class="sidebar-link">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Relatórios</span>
+                </a>
+                </li>
+
+            </ul>
+            <div class="sidebar-footer">
+                <li class="sidebar-item"></li>
+                <a href="/assets/pages/config.html" class="sidebar-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configurações</span>
+                </a>
+                </li>
+                <li class="sidebar-item"></li>
+                <a href="/index.html" class="sidebar-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </a>
+                </li>
+            </div>
+        </aside>
+        <main>
+            <div class="cadastro-recebiveis">
+                <h1>Gestão de Recebíveis - Cadastro</h1>
+                <div class="adicionar-recebiveis">
+                    <h2>Adicionar recebível</h2>
+                    <h3>Para adicionar um recebível, preencha as informações abaixo:</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descrição</label>
+                            <input type="text" class="form-control" id="description" required>
+                        </div>
+                        <div class="mb-3 alinhamento">
+                            <div class="type">
+                                <label for="type" class="form-label">Tipo</label>
+                                <select id="type" class="form-select" required>
+                                    <option>Recebível</option>
+                                    <option>Gasto</option>
+                                </select>
+                            </div>
+                            <div class="value">
+                                <label for="value" class="form-label">Valor</label>
+                                <input type="text" class="form-control" id="value" placeholder="R$ 0,00" required>
+                            </div>                            
+                            <div class="due">
+                                <label for="due" class="form-label">Vencimento</label>
+                                <input type="date" class="form-control" id="due" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer">
+                    <a class="icon-arrow" href="/assets/pages/recebiveisLista.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                    </a>
+                    <div class="cadastrar">
+                        <button type="submit" class="btn btn-danger" id="cadastrar"><a href="/assets/pages/recebiveisLista.html">Cadastrar</a></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/menu.js"></script>
+    <script src="/assets/js/recebiveisCadastro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+    font-family: "Averia Serif Libre", system-ui;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-cinza);
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-branco);
+    font-size: 1.5rem;
+}
+
+.cadastro-recebiveis {
+    background-color: var(--bg-branco);
+    margin: 10rem;
+    border-radius: 8px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.25rem;
+    padding-top: 3rem;
+    padding-left: 3rem;
+}
+
+.adicionar-recebiveis {
+    border: 1px solid var(--bg-cinza-escuro);
+    padding: 3rem;
+    margin: 3rem;
+    box-shadow: -2px 4px 4px -2px var(--bg-preto);
+    border-radius: 8px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--bg-cinza-gray);
+}
+
+form {
+    margin-top: 5rem;
+}
+
+#name {
+    border-color: var(--bg-vermelho);
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+#description {
+    border-color: var(--bg-vermelho);
+    border-width: 2px;
+    border-radius: 8px;
+    min-height: 15rem;
+}
+
+#type {
+    border-color: var(--bg-vermelho);
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+#value {
+    border-color: var(--bg-vermelho);
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+#due {
+    border-color: var(--bg-vermelho);
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.alinhamento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.icon-arrow {
+    color: var(--bg-preto);
+    text-align: left;
+    max-width: 10px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.icon-arrow:hover {
+    color: var(--bg-vermelho);
+}
+
+.cadastrar {
+    margin-bottom: 2rem;
+    text-align: right;
+    margin-right: 3.1rem;
+}
+
+.cadastrar button {
+    border-radius: 15px;
+}
+
+.cadastrar button:hover {
+    background-color: var(--bg-branco);
+    border: 2px solid var(--bg-vermelho);
+}
+
+.cadastrar button a:hover {
+    color: var(--bg-vermelho);
+}
+
+input {
+    text-align: start;
+}
