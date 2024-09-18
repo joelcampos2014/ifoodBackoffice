@@ -16,16 +16,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Recebíveis - Lista</title>
 
     <link rel="stylesheet" href="/assets/css/variaveis.css">
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/recebiveis-lista.css">
     <link rel="stylesheet" href="/assets/css/menu.css">
 </head>
 
 <body>
     <header>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     </header>
     <div class="menu">
@@ -40,7 +39,7 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="/assets/pages/dashboard.html" class="sidebar-link">
                         <i class="fa-solid fa-chart-simple icon"></i>
                         <span>Dashboard</span>
                     </a>
@@ -52,7 +51,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item"></li>
-                    <a href="/assets/pages/recebiveisLista.html" class="sidebar-link">
+                    <a href="#" class="sidebar-link">
                         <i class="fa-solid fa-briefcase"></i>
                         <span>Gestão de Recebíveis</span>
                     </a>
@@ -81,62 +80,66 @@
             </div>
         </aside>
         <main>
-            <div class="cards">
+            <div class="receivables-page">
                 <div class="header">
-                    <div class="greeting">
-                        <h2></h2>
+                    <div class="word-header">
+                        <h2>Gestão de Recebíveis</h2>
                     </div>
-                    <div class="balance">
-                        <button id="hide-balance" type="button">
-                            <i class="fa-regular fa-eye-slash"></i>
+                    <div class="add-button">
+                        <button type="button" class="btn btn-danger" id="button-add"><a href="#">Adicionar</a></button>
+                    </div>
+                </div>
+                <div class="filter-search">
+                    <div class="date-inputs">
+                        <div class="start-date">
+                            <input type="Date" name="start-date" id="start-date">
+                            <label class="input-label" for="start-date">Data Inicial</label>
+                        </div>
+                        <div class="finish-date">
+                            <input type="Date" name="finish-date" id="finish-date">
+                            <label class="input-label" for="finish-date">Data Final</label>
+                        </div>
+                        <button id="reset-button" type="button">
+                            <i class="fa-solid fa-square-xmark"></i>
+                            <span>Resetar Filtros</span>
                         </button>
-                        <p id="balance-amount"></p>
-                        <h2>Saldo em conta:</h2>
+                    </div>
+
+                    <div class="search-input">
+                        <input type="text" placeholder="Buscar Registro" name="search-bar" id="search-bar" class="input-field">
+                        <button id="search-button" type="button">
+                            <i i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="card card1">
-                    <canvas id="sales-chart"></canvas>
-                </div>
-                <div class="card card2">
-                    <canvas id="reiceves-chart"></canvas>
-                </div>
-                <div class="card card3">
-                    <h2>Últimas movimentações</h2>
-                    <table class="moves">
+                <div class="register-list">
+                    <table class="register-table">
                         <thead>
                             <tr>
-                                <th scope="col">Data</th>
-                                <th scope="col">Registro</th>
+                                <th scope="col">Criação</th>
+                                <th scope="col">Nome</th>
                                 <th scope="col">Valor</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                    <script id="move-table" type="text/template">
-                        <tr>
-                            <td>{{Date}}</td>
-                            <td>{{Description}}</td>
-                            <td>{{Amount}}</td>
-                        </tr>
-                    </script>
-                    <button type="button" class="btn btn-danger button"><a href="/assets/pages/extrato.html">Ver Extrato</a></button>
-                </div>
-                <div class="card card4">
-                    <h2>Insights Financeiros</h2>
-                    <table class="insights">
-                        <thead>
-                            <tr>
+                                <th scope="col">Vencimento</th>
+                                <th scope="col">Tipo</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <script id="insights-table" type="text/template">
+                    <script id="table" type="text/template">
                         <tr>
-                            <td>{{Description}}</td>
+                            <td>{{CreationDate}}</td>
+                            <td>{{Name}}</td>
+                            <td>{{Amount}}</td>
+                            <td>{{DueDate}}</td>
+                            <td>{{Type}}</td>
+                            <td>
+                                <div class="add-button">
+                                    <button type="button" class="btn btn-danger details-button"><a href="/assets/pages/recebiveisDetalhe.html">Detalhes</a></button>
+                                </div>
+                            </td>
                         </tr>
                     </script>
-                    <button type="button" class="btn btn-danger button"><a href="#">Ver Relatórios</a></button>
                 </div>
             </div>
         </main>
@@ -146,7 +149,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="/assets/js/menu.js"></script>
-    <script src="/assets/js/dashboard.js"></script>
+    <script src="/assets/js/recebiveis-lista.js"></script>
 </body>
 
 </html>
