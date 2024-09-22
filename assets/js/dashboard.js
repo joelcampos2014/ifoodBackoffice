@@ -9,7 +9,7 @@ new Chart(salesChart, {
             label: 'Faturamento em R$',
             data: [9852, 5674, 2163, 7896, 3258, 900, 8241],
             borderWidth: 1,
-            backgroundColor: '#0B8F10'
+            backgroundColor: '#000000'
         }]
     },
     options: {
